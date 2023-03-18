@@ -1,0 +1,81 @@
+.portfolio {
+  padding: $section-padding;
+}
+.portfolio__nav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.portfolio__btn {
+  font-size: $font-m;
+  font-weight: $font-thick;
+  line-height: 1.62;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-bottom: 34px;
+  height: 38px;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  transition: $transition-delay;
+  &:hover,
+  &:focus {
+    color: $letter;
+    background-color: $brand;
+  }
+}
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+.portfolio__item {
+  margin-bottom: 30px;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    transition: $transition-delay;
+    .portfolio__item--overlay {
+      transform: translateY(0);
+      transition: $transition-delay;
+    }
+  }
+}
+.portfolio__item--overlay {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  background-color: $brand-opaque;
+  font-size: 18px;
+  color: $main-background;
+  line-height: 1.33;
+  padding: 49px 45px 49px 24px;
+  transition: $transition-delay;
+  transform: translateY(100%);
+}
+.portfolio__description {
+  padding-left: 24px;
+  @include border-thin($portfolio-border);
+  position: relative;
+  z-index: 1;
+  background-color: $main-background;
+}
+.portfolio__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 0.4rem;
+}
+.portfolio__type {
+  color: $info;
+  font-size: $font-m;
+  line-height: 1.88;
+  margin-top: 0.4rem;
+}

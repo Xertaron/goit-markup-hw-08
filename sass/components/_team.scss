@@ -1,0 +1,72 @@
+.team {
+  background-color: $group;
+  @include border-thin($group);
+  text-align: center;
+  padding: $section-padding;
+}
+.team__header {
+  font-size: $font-xl;
+  font-weight: $font-bold;
+  line-height: 1.13;
+  text-align: center;
+}
+.team__list {
+  @media screen and (min-width:$desk) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: $mgap;}
+}
+.team__item {
+  background-color: $main-background;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+  border-radius: 0px 0px 4px 4px;
+  height: 428px;
+}
+.team__name {
+  font-weight: $font-thick;
+  font-size: $font-m;
+  line-height: 1.2;
+  padding-top: 7px;
+  font-style: medium;
+}
+.team__job {
+  font-size: $font-thick;
+  color: $info;
+  font-size: $font-m;
+}
+.icons { display: inline-flex;
+  justify-content: space-around;
+  @media screen and (min-width:$desk){
+  margin-left: $medium;
+  margin-right: $medium;
+}
+}
+.icons__item {
+  margin-bottom: $medium;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  @include flex-center;
+  justify-content: center;
+  transition: $transition-delay;
+  &:hover,
+  &:focus {
+    background-color: $brand;
+    cursor: pointer;
+    &:active {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      background-color: $main-background;
+      .icons__vector {
+        fill: $icon;
+      }
+    }
+    .icons__vector {
+      fill: $letter;
+    }
+  }
+}
+.icons__vector {
+  fill: $icon;
+}

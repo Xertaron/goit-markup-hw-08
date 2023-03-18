@@ -1,0 +1,41 @@
+.clients {
+  @include flex-center;
+  background-color: $main-background;
+  padding: $section-padding;
+}
+.clients__header {
+  font-size: $font-xl;
+  font-weight: $font-bold;
+  line-height: 1.13;
+  text-align: center;
+}
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width:$desk) {
+  @include flex-between;
+  margin-top: $mlarge;}
+}
+.clients__item {
+  width: 170px;
+  height: 92px;
+  @include border-thin($icon);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $transition-delay;
+  color: $info;
+  fill: $info;
+  &:hover,
+  &:focus,
+  &:active {
+    transition: $transition-delay;
+    border-color: $brand;
+    color: $brand;
+    cursor: pointer;
+  }
+}
+.clients__icon {
+  fill: $current;
+}

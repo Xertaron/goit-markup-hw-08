@@ -1,0 +1,144 @@
+// Uniwersalne
+$auto: auto;
+$none: none;
+$full: 100%;
+$zero: 0;
+
+// Kolory
+
+$brand: rgb(33, 150, 243, 100%);
+$brand-opaque: rgb(33, 150, 243, 90%);
+$letter: rgb(255, 255, 255, 100%);
+$main-background: rgb(255, 255, 255, 100%);
+$text: rgb(33, 33, 33, 100%);
+$background: rgb(47, 48, 58, 100%);
+$work-block: rgb(47, 48, 58, 80%);
+$hero-background: rgb(47, 48, 58, 40%);
+$info: rgb(117, 117, 117, 100%);
+$info-footer: rgb(255, 255, 255, 60%);
+$group: rgb(245, 244, 250, 100%);
+$icon: rgb(175, 177, 184, 100%);
+$label-text: rgba(117, 117, 117, 0.5);
+$valid: rgba(16, 206, 16, 100%);
+$invalid: rgba(151, 14, 14, 100%);
+$iconbg: rgb(229, 229, 229);
+$border: rgb(236, 236, 236);
+$icon-footer: rgba(255, 255, 255, 10%);
+$input-footer: rgba(33, 150, 243, 0);
+$outline: rgba(255, 255, 255, 0.3);
+$current: currentColor;
+$label: rgba(33, 33, 33, 0.2);
+$modal-icon: rgba(0, 0, 0, 100%);
+$portfolio-border: rgba(238, 238, 238, 100%);
+$active: darkblue;
+// Czcionki
+
+$logo-font: "Raleway", sans-serif;
+$main-font: "Roboto", sans-serif;
+$font-thick: 500;
+$font-bold: 700;
+$font-bulky: 900;
+$font-default: 14px;
+$font-xl: 36px;
+$font-l: 26px;
+$font-m: 16px;
+
+// Rozmiar
+
+$container-width: 1200px;
+$line-height-big: 1.95;
+$tab:768px;
+$desk:1200px;
+
+// Umiejscowienie
+
+$section-padding: 94px 0px 94px 0px;
+$section-footer: 94px;
+$xsmall: 10px;
+$small: 20px;
+$medium: 30px;
+$mlarge: 50px;
+$mgap: 30px;
+
+// Przejścia
+
+$transition-delay: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+$animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
+
+// Mixiny
+@mixin border-thin($bcolor) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $bcolor;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $brand;
+    color: $letter;
+  }
+}
+@mixin submit {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $letter;
+  background-color: $brand;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 0.05em;
+  font-size: $font-m;
+  line-height: 1.6;
+  font-weight: $font-bold;
+  border: $none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: $transition-delay;
+  padding: 0;
+  &:hover,
+  &:focus {
+    color: $letter;
+    scale: 1.1;
+  }
+}
+
+@mixin container {
+  // width: 1200px;
+  width:480px;
+  margin: $auto;
+}
+@mixin logo {font-family: $logo-font;
+font-weight: $font-bold;
+  line-height: $line-height-big;
+  text-decoration: $none;
+font-size: 24px;}
+
+@mixin modal-close-btn {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: $modal-icon;
+  fill: $modal-icon;
+  position: absolute;
+  left: 25%;
+  transform: rotate(45deg);
+}

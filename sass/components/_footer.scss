@@ -1,0 +1,125 @@
+.footer {
+  display: flex;
+  align-items: flex-start;
+  background-color: $background;
+  padding: $mlarge;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: flex-start;
+}
+.footer__logo {
+  font-family: $logo-font;
+  font-size: $font-l;
+  font-weight: $font-bold;
+  line-height: $line-height-big;
+  text-decoration: $none;
+  font-style: normal;
+  transition: $transition-delay;
+  color: $letter;
+}
+.footer__logo--left {
+  color: $brand;
+}
+.footer__link {
+  color: $info-footer;
+  text-decoration: none;
+  line-height: 1.71;
+  font-style: normal;
+  transition: $transition-delay;
+}
+.footer__elements {
+  width: 206px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  transition: $transition-delay;
+  padding: 0;
+}
+.footer__header {
+  font-weight: $font-bold;
+  color: $letter;
+  text-transform: uppercase;
+}
+.footer__list {
+  @include flex-between;
+  margin-top: 5px;
+}
+.footer__item {
+  height: 44px;
+  width: 44px;
+  @include flex-center;
+  justify-content: center;
+  border-radius: 50%;
+  fill: $letter;
+  background-color: $icon-footer;
+  transition: $transition-delay;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $brand;
+    fill: $letter;
+  }
+  &:active {
+    .footer__icon {
+      fill: $background;
+      transition: $transition-delay;
+    }
+  }
+}
+.footer__icon {
+  fill: $letter;
+}
+
+.form {
+  color: $letter;
+}
+.form__header {
+  text-transform: uppercase;
+  font-weight: $font-bold;
+}
+.form__label {
+  display: inline-flex;
+  padding-right: 12px;
+}
+.form__input {
+  background-color: $background;
+  @include border-thin($input-footer);
+  border-radius: 4px;
+  width: 358px;
+  height: $mlarge;
+  padding: 15px 0 15px 16px;
+  color: $letter;
+  outline: 1px solid $outline;
+  &:focus-within {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-color: $brand;
+    outline-color: $brand;
+  }
+  &:not(:placeholder-shown):valid {
+    outline-color: $valid;
+    border-color: $valid;
+  }
+  &:not(:valid):not(:placeholder-shown) {
+    outline-color: $invalid;
+    border-color: $invalid;
+  }
+}
+.submit {
+  @include submit;
+}
+.submit__text {
+  padding: 10px 24px 10px 42px;
+}
+.submit__icon {
+  margin-right: 28px;
+  fill: $letter;
+}

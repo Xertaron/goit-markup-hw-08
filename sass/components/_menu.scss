@@ -1,0 +1,55 @@
+.header {
+
+  @media screen and (min-width:$desk)
+  {@include flex-center;
+  @include border-thin($border);
+  height: 80px;
+  }
+  
+}
+.header__menu {
+  @include flex-between;
+}
+@media screen and (max-width:$desk){
+  .nav, .nav__item, .nav__link, .header-contact, .header-contact__icon, .header-contact__item, .header-contact__link {
+    display: none;
+  }
+}
+@media screen and (min-width:$desk){
+.nav {
+  display: inline-flex;
+  margin-left: 40px;
+  justify-content: space-between;
+}
+.nav__item {
+  display: inline-flex;
+  padding-right: 46px;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+.nav__link {
+  color: $text;
+  font-weight: $font-thick;
+}
+.header-contact {
+  display: inline-flex;
+  align-items: center;
+}
+.header-contact__item {
+  display: inline-flex;
+  &:first-child {
+    padding-right: 50px;
+  }
+}
+.header-contact__link {
+  font-weight: $font-thick;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  color: $info;
+}
+.header-contact__icon {
+  margin-right: 10px;
+  fill: $current;
+}}

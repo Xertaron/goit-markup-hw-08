@@ -1,0 +1,184 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* animation: FadeIn 4s ease-in-out; */
+  transition-property: opacity, visibility;
+  transition: $transition-delay;
+}
+.backdrop__is-hidden {
+  opacity: $zero;
+  visibility: hidden;
+  pointer-events: $none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: $main-background;
+  border-radius: 4px;
+  transition: $transition-delay;
+  /* animation: var(--animation); */
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: $medium;
+  height: $medium;
+  background-color: $main-background;
+  @include border-thin(rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  &::before {
+    @include modal-close-btn;
+  }
+  &::after {
+    @include modal-close-btn;
+    transform: rotate(-45deg);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $brand;
+  }
+}
+.modal__header {
+  text-align: center;
+  margin-top: 40px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $xsmall;
+}
+.modal__label {
+  display: inline-flex;
+  flex-direction: column;
+  color: $info;
+  position: relative;
+  &:focus-within {
+    .modal__icon {
+      color: $brand;
+      fill: $brand;
+      transition: $transition-delay;
+    }
+  }
+}
+.modal__span {
+  margin-bottom: 4px;
+}
+.modal__input {
+  width: 448px;
+  height: 40px;
+  border-radius: 4px;
+  @include border-thin($label);
+  padding-left: 35px;
+  gap: $xsmall;
+  transition: $transition-delay;
+  &:focus-within {
+    outline-color: $brand;
+    transition: $transition-delay;
+  }
+  &:invalid {
+    outline-color: $invalid;
+  }
+  &:valid:not(:placeholder-shown) {
+    outline-color: $valid;
+  }
+  &::placeholder {
+    color: $label-text;
+  }
+}
+.modal__icon {
+  fill: $modal-icon;
+  position: absolute;
+  top: 57%;
+  &:nth-child(1) {
+    left: 15px;
+  }
+  &:nth-child(2) {
+    left: 14.27px;
+  }
+  &:nth-child(3) {
+    left: 13.5px;
+  }
+}
+.modal__text-area {
+  width: 448px;
+  height: 120px;
+  @include border-thin($label);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-left: 16px;
+  resize: none;
+  transition: $transition-delay;
+  &:focus-within {
+    outline-color: $brand;
+    transition: $transition-delay;
+  }
+  &::placeholder {
+    color: $label-text;
+  }
+}
+.modal__consent {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  gap: 8px;
+  margin: 10px 0 30px 20px;
+  transition: $transition-delay;
+  letter-spacing: 0.03em;
+  color: $info;
+}
+.modal__link {
+  color: $brand;
+}
+.modal__checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  &:checked ~ .modal__icon--outline {
+    fill: $brand;
+    transition: $transition-delay;
+  }
+  &:checked ~ .modal__icon--check {
+    background-color: $brand;
+    transition: $transition-delay;
+    visibility: visible;
+    border-color: $brand;
+    fill: $letter;
+  }
+}
+
+.modal__icon--outline {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 16px;
+  height: 15px;
+  fill: $modal-icon;
+}
+.modal__icon--check {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 16px;
+  height: 15px;
+  visibility: hidden;
+  border-radius: 4px;
+}
+
+.modal__submit {
+  @include submit;
+}
