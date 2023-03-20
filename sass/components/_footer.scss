@@ -2,19 +2,39 @@
   display: flex;
   align-items: flex-start;
   background-color: $background;
-  padding: $mlarge;
+  padding: 60px 0 60px 0;
+  min-width: 500px;
+  @media screen and (min-width:$tab) {
+    padding-top:10px;
+  }
+  @media screen and (min-width:$desk) {
+    padding: $mlarge;
+  }
 }
 .footer__wrapper {
-  display: flex;
-  justify-content: space-between;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
   flex-wrap: wrap;
+  @media screen and (min-width:$tab) {
+  flex-direction: row;
+  justify-content: space-around;
   align-items: baseline;
+  }
+  @media screen and (min-width:$desk) {
+    justify-content: space-between;
+    text-align: start;
+  }
 }
 .footer__address {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  align-items: flex-start;
+  align-items: center;
+  margin: 0;
+  @media screen and (min-width:$desk) {
+    align-items: flex-start;
+  }
 }
 .footer__logo {
   font-family: $logo-font;
@@ -42,7 +62,7 @@
   flex-direction: column;
   justify-content: baseline;
   transition: $transition-delay;
-  padding: 0;
+  padding: 46px 0;
 }
 .footer__header {
   font-weight: $font-bold;
@@ -85,16 +105,24 @@
 .form__header {
   text-transform: uppercase;
   font-weight: $font-bold;
+  margin: 0;
+  padding-top: 14px;
+  @media screen and (min-width:$tab) {
+    padding-top: 60px;
+  }
 }
 .form__label {
   display: inline-flex;
-  padding-right: 12px;
-}
+  padding: 20px 0;
+  padding-right: 15px;
+  @media screen and (min-width:$tab) and (max-width:$near-desk) {
+    display: flex;
+}}
 .form__input {
   background-color: $background;
   @include border-thin($input-footer);
   border-radius: 4px;
-  width: 358px;
+  width: 450px;
   height: $mlarge;
   padding: 15px 0 15px 16px;
   color: $letter;
@@ -111,6 +139,10 @@
   &:not(:valid):not(:placeholder-shown) {
     outline-color: $invalid;
     border-color: $invalid;
+  }
+  
+  @media screen and (min-width:$desk) {
+    width: 358px;
   }
 }
 .submit {

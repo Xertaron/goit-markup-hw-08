@@ -2,22 +2,26 @@
   @include flex-center;
   background-color: $main-background;
   padding: $section-padding;
+  min-width:500px;
 }
 .clients__header {
   font-size: $font-xl;
   font-weight: $font-bold;
   line-height: 1.13;
   text-align: center;
+  
 }
 .clients__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   @media screen and (min-width:$desk) {
   @include flex-between;
   margin-top: $mlarge;}
 }
 .clients__item {
-  width: 170px;
+  width: 210px;
   height: 92px;
   @include border-thin($icon);
   border-radius: 4px;
@@ -34,6 +38,12 @@
     border-color: $brand;
     color: $brand;
     cursor: pointer;
+  }
+  @media screen and (min-width:$tab) {
+    width: 226px;
+  }
+  @media screen and (min-width:$desk) {
+    width: 170px;
   }
 }
 .clients__icon {

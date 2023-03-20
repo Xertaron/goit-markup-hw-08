@@ -1,5 +1,6 @@
 .team {
   background-color: $group;
+  min-width: 500px;
   @include border-thin($group);
   text-align: center;
   padding: $section-padding;
@@ -11,25 +12,53 @@
   text-align: center;
 }
 .team__list {
-  @media screen and (min-width:$desk) {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width:$tab) {
+    gap:$mgap;
+  }
+  @media screen and (min-width:$desk) {
   justify-content: space-between;
   margin-top: 50px;
-  gap: $mgap;}
+  }
 }
 .team__item {
+  width: 450px;
   background-color: $main-background;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
   border-radius: 0px 0px 4px 4px;
-  height: 428px;
+  margin-bottom: 30px;
+  &:last-child {margin: 0;}
+  @media screen and (min-width:$tab) {
+    width: 354px;
+    margin: 0;
+    
+  }
+  @media screen and (min-width:$desk) {
+    height: 428px;
+    width: auto;
+    }
+}
+.team__img {
+  width:450px;
+  height:460px;
+  @media screen and (min-width:768px) {
+    width: 354px;
+    height:374px;
+  }
+  @media screen and (min-width:1200px) {
+    width: 270px;
+    height: 260px;
+  }
 }
 .team__name {
   font-weight: $font-thick;
   font-size: $font-m;
   line-height: 1.2;
   padding-top: 7px;
-  font-style: medium;
+  
 }
 .team__job {
   font-size: $font-thick;
@@ -44,13 +73,15 @@
 }
 }
 .icons__item {
-  margin-bottom: $medium;
+  margin-bottom: 24px;
   height: 44px;
   width: 44px;
   border-radius: 50%;
+  margin-right: 10px;
   @include flex-center;
   justify-content: center;
   transition: $transition-delay;
+  &:last-child{margin: 0}
   &:hover,
   &:focus {
     background-color: $brand;
@@ -65,6 +96,10 @@
     .icons__vector {
       fill: $letter;
     }
+  }
+  @media screen and (min-width:$desk) {
+    margin-right: 0;
+    margin-bottom: $medium;
   }
 }
 .icons__vector {

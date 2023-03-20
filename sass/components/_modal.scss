@@ -19,7 +19,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   background-color: $main-background;
   border-radius: 4px;
@@ -27,6 +27,9 @@
   /* animation: var(--animation); */
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    @media screen and (min-width:$desk) {
+      width: 528px;
+    }
 }
 .modal__close-btn {
   position: absolute;
@@ -38,10 +41,10 @@
   @include border-thin(rgba(0, 0, 0, 0.1));
   border-radius: 50%;
   &::before {
-    @include modal-close-btn;
+    @include close-btn;
   }
   &::after {
-    @include modal-close-btn;
+    @include close-btn;
     transform: rotate(-45deg);
   }
   &:hover,
@@ -52,7 +55,10 @@
 }
 .modal__header {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px 40px 12px 40px;
+  @media screen and (min-width:$desk) {
+    margin: 40px 0;
+  }
 }
 .modal__form {
   display: flex;
@@ -77,7 +83,7 @@
   margin-bottom: 4px;
 }
 .modal__input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border-radius: 4px;
   @include border-thin($label);
@@ -97,6 +103,9 @@
   &::placeholder {
     color: $label-text;
   }
+  @media screen and (min-width:$desk) {
+    width: 448px;
+  }
 }
 .modal__icon {
   fill: $modal-icon;
@@ -113,7 +122,7 @@
   }
 }
 .modal__text-area {
-  width: 448px;
+  width: 370px;
   height: 120px;
   @include border-thin($label);
   border-radius: 4px;
@@ -128,6 +137,9 @@
   &::placeholder {
     color: $label-text;
   }
+  @media screen and (min-width:$desk) {
+    width: 448px;
+  }
 }
 .modal__consent {
   display: block;
@@ -138,6 +150,10 @@
   transition: $transition-delay;
   letter-spacing: 0.03em;
   color: $info;
+  font-size: 12px;
+  @media screen and (min-width:$desk) {
+    font-size: $font-default;
+  }
 }
 .modal__link {
   color: $brand;
@@ -163,22 +179,32 @@
 
 .modal__icon--outline {
   position: absolute;
-  top: 0;
-  left: -25px;
+  top:-2px;
+  left: -23px;
   width: 16px;
   height: 15px;
   fill: $modal-icon;
+
+  @media screen and (min-width:$desk) {
+    top: 0;
+  left: -25px;
+  }
 }
 .modal__icon--check {
   position: absolute;
-  top: 0;
-  left: -25px;
+  top:-2px;
+  left: -23px;
   width: 16px;
   height: 15px;
   visibility: hidden;
   border-radius: 4px;
+  @media screen and (min-width:$desk) {
+    top: 0;
+  left: -25px;
+  }
 }
 
 .modal__submit {
   @include submit;
+  margin-bottom: 40px;
 }

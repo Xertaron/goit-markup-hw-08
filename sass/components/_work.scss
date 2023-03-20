@@ -1,5 +1,9 @@
-.work {
-  padding: $section-padding;
+.work {display: none;
+  @media screen and (min-width:$desk) {
+    display: block;
+    padding: $section-padding;
+    
+  }
 }
 .work__header {
   font-size: $font-xl;

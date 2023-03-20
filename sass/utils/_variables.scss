@@ -47,8 +47,11 @@ $font-m: 16px;
 
 $container-width: 1200px;
 $line-height-big: 1.95;
+$phone:480px;
 $tab:768px;
+$near-tab:767px;
 $desk:1200px;
+$near-desk:1199px;
 
 // Umiejscowienie
 
@@ -64,6 +67,7 @@ $mgap: 30px;
 
 $transition-delay: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
+
 
 // Mixiny
 @mixin border-thin($bcolor) {
@@ -123,8 +127,15 @@ $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
 
 @mixin container {
   // width: 1200px;
-  width:480px;
+  width:450px;
   margin: $auto;
+  @media screen and (min-width:$tab) {
+    width: 738px;
+  }
+  @media screen and (min-width:$desk) {
+    width: 1200px;
+  }
+
 }
 @mixin logo {font-family: $logo-font;
 font-weight: $font-bold;
@@ -132,7 +143,7 @@ font-weight: $font-bold;
   text-decoration: $none;
 font-size: 24px;}
 
-@mixin modal-close-btn {
+@mixin close-btn {
   content: "";
   width: 15px;
   height: 2px;

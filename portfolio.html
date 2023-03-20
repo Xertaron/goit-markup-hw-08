@@ -19,37 +19,42 @@
       <!--Menu-->
       <div class="container">
         <section class="header__menu">
-          <nav>
-            <a class="logo" href="index.html">
-              <span class="logo__left">Web</span>Studio</a
-            >
-            <ul class="nav">
-              <li class="nav__item">
-                <a href="index.html" class="nav__link">Agencja</a>
+            <nav>
+              <a class="logo" href="index.html">
+                <span class="logo__left">Web</span>Studio</a
+              >
+              <ul class="nav">
+                <li class="nav__item">
+                  <a href="index.html" class="nav__link current">Agencja</a>
+                </li>
+                <li class="nav__item">
+                  <a href="portfolio.html" class="nav__link">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Kontakt</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="header-contact">
+              <li class="header-contact__item">
+                <a
+                  class="header-contact__link"
+                  href="mailto:info@devstudio.com">
+                  <svg class="header-contact__icon" width="16" height="12">
+                    <use href="images/icons.svg#icon-envelope"></use>
+                  </svg>info@devstudio.com</a>
               </li>
-              <li class="nav__item">
-                <a href="portfolio.html" class="nav__link current">Portfolio</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Kontakt</a>
+              <li class="header-contact__item">
+                <a class="header-contact__link" href="tel:+48111111111">
+                  <svg class="header-contact__icon" width="10" height="16">
+                    <use href="images/icons.svg#icon-smartphone"></use>
+                    </svg>+48 111 111 111</a>
               </li>
             </ul>
-          </nav>
-          <ul class="header-contact">
-            <li class="header-contact__item">
-              <a class="header-contact__link" href="mailto:info@devstudio.com">
-                <svg class="header-contact__icon" width="16" height="12">
-                  <use href="images/icons.svg#icon-envelope"></use>
-                </svg>info@devstudio.com</a>
-            </li>
-            <li class="header-contact__item">
-              <a class="header-contact__link" href="tel:+48111111111">
-                <svg class="header-contact__icon" width="10" height="16">
-                  <use href="images/icons.svg#icon-smartphone"></use>
-                  </svg>+48 111 111 111</a>
-            </li>
-          </ul>
-        </section>
+            <button class="header__btn js-open-menu">
+              <div class="header__btn--open"></div>
+            </button>
+           </section>      
       </div>
     </header>
     <main>
@@ -86,11 +91,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/technocrack.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio1@2x.jpg"
+                  src="images/everything/portfolio1.jpg"
                   alt="laptop displaying a website"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Technocrack</h3>
                   <p class="portfolio__type">Strona internetowa</p>
@@ -105,11 +110,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/new-orlean-vs-golden-star.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio2@2x.jpg"
+                  src="images/everything/portfolio2.jpg"
                   alt="two basketball players"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">
                     Grafika New Orlean vs Golden Star
@@ -126,11 +131,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/seafood.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio3@2x.jpg"
+                  src="images/everything/portfolio3.jpg"
                   alt="logo on top of a fish"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Restauracja Seafood</h3>
                   <p class="portfolio__type">Aplikacja</p>
@@ -145,11 +150,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/prime.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio4@2x.jpg"
+                  src="images/everything/portfolio4.jpg"
                   alt="black headphones"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Projekt Prime</h3>
                   <p class="portfolio__type">Marketing</p>
@@ -164,11 +169,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/boxes.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio5@2x.jpg"
+                  src="images/everything/portfolio5.jpg"
                   alt="white and brown box"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Projekt Boxes</h3>
                   <p class="portfolio__type">Aplikacja</p>
@@ -183,11 +188,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/inspiration-has-no-borders.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio6@2x.jpg"
+                  src="images/everything/portfolio6.jpg"
                   alt="monitor displaying a website"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Inspiration has no Borders</h3>
                   <p class="portfolio__type">Strona internetowa</p>
@@ -202,11 +207,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/limited-Edition.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio7@2x.jpg"
+                  src="images/everything/portfolio7.jpg"
                   alt="opened magazine"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Magazyn Limited Edition</h3>
                   <p class="portfolio__type">Dizajn</p>
@@ -221,11 +226,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/lab.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio8@2x.jpg"
+                  src="images/everything/portfolio8.jpg"
                   alt="large wide tag"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Projekt LAB</h3>
                   <p class="portfolio__type">Marketing</p>
@@ -240,11 +245,11 @@
                     niezabezpieczone serwery konkurencji
                   </p>
                 </div>
-                <img
-                  src="images/everything/growing-business.jpg"
+                <img class="portfolio__img"
+                  srcset="images/everything/portfolio9@2x.jpg"
+                  src="images/everything/portfolio9.jpg"
                   alt="hands writing on a laptop"
-                  width="370"
-                  height="294" />
+                 />
                 <div class="portfolio__description">
                   <h3 class="portfolio__name">Growing Business</h3>
                   <p class="portfolio__type">Aplikacja</p>
@@ -332,5 +337,12 @@
         </form>
       </div>
     </footer>
+    <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"
+            ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

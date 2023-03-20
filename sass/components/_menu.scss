@@ -1,32 +1,33 @@
 .header {
-
+ @include border-thin($border);
+ min-width: 500px;
   @media screen and (min-width:$desk)
   {@include flex-center;
-  @include border-thin($border);
-  height: 80px;
+  min-height: 80px;
   }
   
 }
 .header__menu {
   @include flex-between;
 }
-@media screen and (max-width:$desk){
+@media screen and (max-width:$near-tab){
   .nav, .nav__item, .nav__link, .header-contact, .header-contact__icon, .header-contact__item, .header-contact__link {
     display: none;
   }
 }
-@media screen and (min-width:$desk){
+@media screen and (min-width:$tab){
 .nav {
   display: inline-flex;
   margin-left: 40px;
   justify-content: space-between;
+  gap: 50px;
+  @media screen and (min-width:$tab) and (max-width:$near-desk) {
+    margin-left:93px;
+  }
 }
 .nav__item {
   display: inline-flex;
-  padding-right: 46px;
-  &:last-child {
-    padding-right: 0;
-  }
+  
 }
 .nav__link {
   color: $text;
@@ -35,11 +36,19 @@
 .header-contact {
   display: inline-flex;
   align-items: center;
+  @media screen and (min-width:$tab) and (max-width:$near-desk) {
+    flex-direction: column;
+    align-items: baseline;
+  }
 }
 .header-contact__item {
   display: inline-flex;
   &:first-child {
     padding-right: 50px;
+  }
+  @media screen and (min-width:$tab) {
+    &:first-child {
+    padding-right:15px;}
   }
 }
 .header-contact__link {
@@ -48,8 +57,134 @@
   display: inline-flex;
   align-items: center;
   color: $info;
+
 }
 .header-contact__icon {
   margin-right: 10px;
   fill: $current;
 }}
+.header__btn {
+  margin: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  @media screen and (min-width:$tab) {
+    display: none;
+  }
+}
+.header__btn--open {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 24px;
+  height: 2.67px;
+  background-color: $modal-icon;
+  top: 50%;
+  left: 18%;
+  &::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 24px;
+  height: 2.67px;
+  top:-6px;
+  background-color: $modal-icon;
+  }
+  &::after{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2.67px;
+  background-color: $modal-icon;
+  top:6px;
+  }
+}
+.menu__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: $main-background;
+  transform: translateX(500%);
+  transition: transform 250ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+.is-open {
+  transform: translateX(0);
+}
+.menu__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: $medium;
+  height: $medium;
+  background-color: $main-background;
+  border: none;
+  &::before {
+    @include close-btn;
+    width: 18.67px;
+  }
+  &::after {
+    @include close-btn;
+    width: 18.67px;
+    transform: rotate(-45deg);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    &::after, &::before {
+      background-color: $brand;
+      transition: $transition-delay;
+    }
+  }
+}
+.menu__nav {
+  display: inline-flex;
+  flex-direction: column;
+  margin:48px 0 0 40px;
+  gap: 32px;
+  
+}
+.menu__item {
+  font-size: 40px;
+  font-weight: $font-thick;
+}
+.menu__contact {
+font-weight: $font-thick;
+}
+.menu__contact--phone {
+  @extend .menu__contact;
+  font-size: 34px;
+  color: $brand;
+}
+.menu__contact--email {
+  @extend .menu__contact;
+  font-size:24px;
+  color:$info;
+}
+.menu__contact-list {
+  @extend .menu__nav;
+  padding-top: 302px;
+}
+.menu__socials-list {
+  display: inline-flex;
+  margin-left:40px;
+  padding-top:64px;
+  justify-content: space-between;
+  margin-right: 83px;
+}
+.menu__socials-item {
+border-right: solid 1px $label;
+padding-right: 10px;
+font-size: 18px;
+&:last-child {border:none;
+padding-right: 0;}
+}
+
+.menu__socials-link {
+  color: $brand;}

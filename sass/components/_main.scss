@@ -2,11 +2,20 @@
   display: flex;
   background-color: $main-background;
   justify-content: center;
+  min-width: 500px;
+  @media screen and (min-width:$tab) {
+    width: 100vw;
+  }
+  @media screen and (min-width:$desk) {
+    width: 100vw;
+  }
+  
 }
 .main__list {
-  padding: 60px 15px 0 15px;
+  padding: 60px 15px 60px 15px;  
   @media screen and (min-width:$tab) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     
   }
@@ -18,8 +27,12 @@
   
 }
 .main__item {
+  display: block;
   margin:15px 0;
-  
+  max-width: 450px;
+  @media screen and (min-width:$tab) {
+    max-width: 354px;
+  }
   
   @media screen and (min-width:$desk){
   max-width: 270px;
@@ -33,10 +46,10 @@
 .main__icon {
   padding: 25px 0;
   background-color: $group;
-  width: 100vw - 15;
+  width: 450px;
   height: 120px;
   @media screen and (min-width:$tab) {
-  
+  width: 354px;
   }
 
   @media screen and (min-width:$desk){
@@ -50,9 +63,12 @@
   @media screen and (min-width:$desk) {
   text-align: start;
   }
+  @media screen and (max-width:479px) {
+    text-align: start;
+  }
 }
 .main__description {
   line-height: 1.71;
   color: $info;
-  width: 95%;
+  max-width: 95%;
 }
