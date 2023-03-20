@@ -1,6 +1,6 @@
 .header {
  @include border-thin($border);
- min-width: 500px;
+ max-width: 100vw;
   @media screen and (min-width:$desk)
   {@include flex-center;
   min-height: 80px;
@@ -9,6 +9,7 @@
 }
 .header__menu {
   @include flex-between;
+  max-width: 100vw;
 }
 @media screen and (max-width:$near-tab){
   .nav, .nav__item, .nav__link, .header-contact, .header-contact__icon, .header-contact__item, .header-contact__link {

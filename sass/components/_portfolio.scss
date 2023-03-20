@@ -1,4 +1,5 @@
 .portfolio {
+  width: 100vw;
   margin-left: 15px;
   margin-top: 60px;
   @media screen and (min-width:$desk) {
@@ -8,7 +9,7 @@
 }
 .portfolio__nav {
   display: flex;
-  min-width: 500px;
+  width: 100vw;
   flex-wrap: wrap;
   @media screen and (min-width:$tab) {
     justify-content: center;
@@ -69,7 +70,7 @@
 }
 .portfolio__img {
  
-  width: 450px;
+ width: 95vw;
   height: 270px;
    @media screen and (min-width:$tab){
     width: 354px;
@@ -80,7 +81,7 @@
 }
 .portfolio__item--overlay {
   position: absolute;
-  width: 450px;
+  width: 95vw;
   height: 294px;
   background-color: $brand-opaque;
   font-size: 18px;

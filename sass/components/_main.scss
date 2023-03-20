@@ -2,7 +2,7 @@
   display: flex;
   background-color: $main-background;
   justify-content: center;
-  min-width: 500px;
+  width: 100vw;
   @media screen and (min-width:$tab) {
     width: 100vw;
   }
@@ -46,7 +46,7 @@
 .main__icon {
   padding: 25px 0;
   background-color: $group;
-  width: 450px;
+  width: 95vw;
   height: 120px;
   @media screen and (min-width:$tab) {
   width: 354px;
