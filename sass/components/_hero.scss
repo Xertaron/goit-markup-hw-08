@@ -56,10 +56,12 @@
   line-height: 1.36;
   color: $main-background;
   text-transform: uppercase;
+  @media screen and (min-width:$tab) {
+    margin: 0 150px 0 150px;
+  }
   @media screen and (min-width:$desk) {
   font-size: 44px;
-  margin-left: 252px;
-  margin-right: 252px;
+ margin: 0 252px 0 252px;
   }
 }
 .hero__btn {
