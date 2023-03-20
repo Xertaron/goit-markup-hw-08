@@ -1,7 +1,7 @@
 .hero {
   @include flex-center;
   background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-  url(../../images/hero/herobackground-phone.jpg);
+  url(../images/hero/herobackground-phone.jpg);
   height: auto;
   background-size: cover;
   background-position: 50%;
@@ -16,31 +16,30 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx){
     background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../../images/hero/herobackground-phone@2x.jpg);
+    url(../images/hero/herobackground-phone@2x.jpg);
   }
   @media (min-device-pixel-ratio: 2) and (min-width:$tab) and (max-width:$near-desk),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx){
     background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../../images/hero/herobackground-tab@2x.jpg);
+    url(../images/hero/herobackground-tab@2x.jpg);
   }
   @media (min-device-pixel-ratio: 2) and (min-width:$desk),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx){
     background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../../images/hero/herobackground-desk@2x.jpg);
+    url(../images/hero/herobackground-desk@2x.jpg);
   }
   //Wiem że ma nie być powtarzania właściwości w zapytania o media, ale z jakiegoś powodu jeśli ich nie wprowadzę ponownie to przeglądarka ich nie zaaplikuje.
   @media screen and (min-width:$tab) {
     background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../../images/hero/herobackground-desk.jpg);
-   background-position: 50%;
-   background-size: cover;
-   min-height:400px;
+    url(../images/hero/herobackground-desk.jpg);
+    background-position: 50%;
+    background-size: cover;
   }
   @media screen and (min-width:$desk) {
     background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../../images/hero/herobackground-desk.jpg);
+    url(../images/hero/herobackground-desk.jpg);
     background-position: 50%;
     min-height: 600px;
   }
