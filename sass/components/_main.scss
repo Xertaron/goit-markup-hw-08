@@ -3,66 +3,59 @@
   background-color: $main-background;
   justify-content: center;
   width: 100vw;
-  padding:$section-padding;
+  padding: $section-padding;
 }
 .main__list {
   margin: auto;
-  @media screen and (min-width:$tab) and (max-width:$near-desk) {
+  @media screen and (min-width: $tab) and (max-width: $near-desk) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
   }
-  @media screen and (min-width:$desk) {
-    
+  @media screen and (min-width: $desk) {
     padding-top: 94px;
     display: flex;
-  justify-content: space-between;
-  
-
+    justify-content: space-between;
   }
-  
 }
 .main__item {
-  margin:15px 0;
+  margin: 15px 0;
   max-width: 95vw;
-  @media screen and (min-width:$tab) {
+  @media screen and (min-width: $tab) {
     max-width: 354px;
     display: flex;
     flex-wrap: wrap;
   }
-  
-  @media screen and (min-width:$desk){
-    
-  max-width: 270px;
-  
-  &:last-child {
-    margin-right: 0;
+
+  @media screen and (min-width: $desk) {
+    max-width: 270px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  
-}
 }
 .main__icon {
   padding: 25px 0;
   background-color: $group;
   min-width: 95vw;
   max-height: 120px;
-  @media screen and (min-width:$tab) {
-  min-width: 354px;
+  @media screen and (min-width: $tab) {
+    min-width: 354px;
   }
 
-  @media screen and (min-width:$desk){
-  min-width: 270px;}
+  @media screen and (min-width: $desk) {
+    min-width: 270px;
+  }
 }
 .main__name {
   text-align: start;
   font-weight: $font-bold;
   text-transform: uppercase;
-  
-  @media screen and (max-width:$near-phone) {
-     text-align: center;
+
+  @media screen and (max-width: $near-phone) {
+    text-align: center;
   }
-  
 }
 .main__description {
   margin-top: 0;

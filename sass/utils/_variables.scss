@@ -47,12 +47,12 @@ $font-m: 16px;
 
 $container-width: 1200px;
 $line-height-big: 1.95;
-$phone:480px;
-$near-phone:479px;
-$tab:768px;
-$near-tab:767px;
-$desk:1200px;
-$near-desk:1199px;
+$phone: 480px;
+$near-phone: 479px;
+$tab: 768px;
+$near-tab: 767px;
+$desk: 1200px;
+$near-desk: 1199px;
 
 // Umiejscowienie
 
@@ -68,7 +68,6 @@ $mgap: 30px;
 
 $transition-delay: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
-
 
 // Mixiny
 @mixin border-thin($bcolor) {
@@ -131,20 +130,21 @@ $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
   // width: 1200px;
   margin: $auto;
   max-width: 900px;
-  @media screen and (min-width:$tab) {
+  @media screen and (min-width: $tab) {
     min-width: 738px;
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     max-width: none;
-   width: 1200px;
+    width: 1200px;
   }
-
 }
-@mixin logo {font-family: $logo-font;
-font-weight: $font-bold;
+@mixin logo {
+  font-family: $logo-font;
+  font-weight: $font-bold;
   line-height: $line-height-big;
   text-decoration: $none;
-font-size: 24px;}
+  font-size: 24px;
+}
 
 @mixin close-btn {
   content: "";

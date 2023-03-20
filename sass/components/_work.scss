@@ -1,8 +1,8 @@
-.work {display: none;
-  @media screen and (min-width:$desk) {
+.work {
+  display: none;
+  @media screen and (min-width: $desk) {
     display: block;
     padding: $section-padding;
-   
   }
 }
 .work__header {
@@ -13,14 +13,13 @@
 }
 .work__list {
   max-width: 95vw;
-  @media screen and (min-width:$desk) {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  
-  padding: 0;
+  @media screen and (min-width: $desk) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    padding: 0;
   }
- 
 }
 .work__item {
   max-width: 370px;
@@ -29,7 +28,7 @@
 }
 .work__img {
   max-width: 370px;
-  max-height:294px;
+  max-height: 294px;
 }
 .work__description {
   position: absolute;

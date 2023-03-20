@@ -8,25 +8,23 @@
   font-size: $font-xl;
   font-weight: $font-bold;
   line-height: 1.13;
- 
 }
 .team__list {
-  
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  @media screen and (min-width:$tab) {
-    gap:$mgap;
+  @media screen and (min-width: $tab) {
+    gap: $mgap;
     flex-direction: row;
     justify-content: center;
   }
-  @media screen and (min-width:$desk) {
-    gap:0;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  margin-top: 50px;
-  max-width: 95vw;
+  @media screen and (min-width: $desk) {
+    gap: 0;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    max-width: 95vw;
   }
 }
 .team__item {
@@ -36,28 +34,29 @@
     0px 1px 3px 0px #0000001f;
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
-  &:last-child {margin: 0;}
-  @media screen and (min-width:$tab) {
+  &:last-child {
+    margin: 0;
+  }
+  @media screen and (min-width: $tab) {
     width: 354px;
     margin: 0;
-    
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     height: 428px;
     width: auto;
-    }
+  }
 }
 .team__img {
-  max-width:95vw;
-  @media screen and (min-width:$phone) {
+  max-width: 95vw;
+  @media screen and (min-width: $phone) {
     width: 450px;
   }
-  
-  @media screen and (min-width:$tab) {
+
+  @media screen and (min-width: $tab) {
     width: 354px;
-    height:374px;
+    height: 374px;
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     width: 270px;
     height: 260px;
   }
@@ -67,19 +66,19 @@
   font-size: $font-m;
   line-height: 1.2;
   padding-top: 7px;
-  
 }
 .team__job {
   font-size: $font-thick;
   color: $info;
   font-size: $font-m;
 }
-.icons { display: inline-flex;
+.icons {
+  display: inline-flex;
   justify-content: space-around;
-  @media screen and (min-width:$desk){
-  margin-left: $medium;
-  margin-right: $medium;
-}
+  @media screen and (min-width: $desk) {
+    margin-left: $medium;
+    margin-right: $medium;
+  }
 }
 .icons__item {
   margin-bottom: 24px;
@@ -90,7 +89,9 @@
   @include flex-center;
   justify-content: center;
   transition: $transition-delay;
-  &:last-child{margin: 0}
+  &:last-child {
+    margin: 0;
+  }
   &:hover,
   &:focus {
     background-color: $brand;
@@ -106,7 +107,7 @@
       fill: $letter;
     }
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     margin-right: 0;
     margin-bottom: $medium;
   }

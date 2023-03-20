@@ -1,11 +1,11 @@
 .logo {
-  @include logo; 
-  padding:5px 15px;
-  @media screen and (min-width:$desk) {
+  @include logo;
+  padding: 5px 15px;
+  @media screen and (min-width: $desk) {
     @include logo;
     margin-right: 93px;
     font-size: $font-l;
-    }
+  }
 }
 .logo__left {
   color: $brand;

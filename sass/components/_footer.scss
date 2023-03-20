@@ -4,10 +4,10 @@
   background-color: $background;
   padding: 60px 0 60px 0;
   max-width: 100vw;
-  @media screen and (min-width:$tab) {
-    padding-top:10px;
+  @media screen and (min-width: $tab) {
+    padding-top: 10px;
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     padding: $mlarge;
   }
 }
@@ -17,15 +17,14 @@
   flex-direction: column;
   text-align: center;
   flex-wrap: wrap;
-  @media screen and (min-width:$tab) {
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: baseline;
+  @media screen and (min-width: $tab) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     justify-content: space-between;
     text-align: start;
-    
   }
 }
 .footer__address {
@@ -34,7 +33,7 @@
   gap: 9px;
   align-items: center;
   margin: 0;
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     align-items: flex-start;
   }
 }
@@ -109,19 +108,20 @@
   font-weight: $font-bold;
   margin: 0;
   padding-top: 14px;
-  @media screen and (min-width:$tab) {
+  @media screen and (min-width: $tab) {
     padding-top: 60px;
   }
 }
 .form__label {
   display: inline-flex;
   padding: 20px 0;
-  @media screen and (min-width:$tab) and (max-width:$near-desk) {
+  @media screen and (min-width: $tab) and (max-width: $near-desk) {
     display: flex;
+  }
+  @media screen and (min-width: $desk) {
+    padding-right: 15px;
+  }
 }
-@media screen and (min-width:$desk) {
-   padding-right: 15px;
-}}
 .form__input {
   background-color: $background;
   @include border-thin($input-footer);
@@ -144,10 +144,10 @@
     outline-color: $invalid;
     border-color: $invalid;
   }
-  @media screen and (min-width:$tab) {
+  @media screen and (min-width: $tab) {
     min-width: 60vw;
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     min-width: 358px;
   }
 }

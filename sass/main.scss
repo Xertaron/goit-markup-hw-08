@@ -10,7 +10,6 @@
 @import "components/modal";
 @import "components/portfolio";
 
-
 * {
   box-sizing: border-box;
 }
@@ -19,7 +18,7 @@ body {
   font-family: $main-font;
   font-size: $font-default;
   color: $text;
-  margin:0;
+  margin: 0;
   // display: flex;
   // flex-wrap: wrap;
   // flex-direction: column;
@@ -50,7 +49,7 @@ li {
   list-style: $none;
 }
 .container {
-@include container;
+  @include container;
 }
 .current {
   color: $brand;
@@ -65,9 +64,10 @@ li {
     border-radius: 2px;
     background-color: $brand;
   }
-  @media screen and (min-width:$desk) {
+  @media screen and (min-width: $desk) {
     &::after {
-      top:44px}
+      top: 44px;
+    }
   }
 }
 a:hover,
@@ -80,4 +80,3 @@ button:focus {
     color: $active;
   }
 }
-

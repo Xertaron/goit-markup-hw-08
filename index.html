@@ -42,20 +42,18 @@
                   class="header-contact__link"
                   href="mailto:info@devstudio.com">
                   <svg class="header-contact__icon" width="16" height="12">
-                    <use href="images/icons.svg#icon-envelope"></use>
-                  </svg>info@devstudio.com</a>
+                    <use href="images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a>
               </li>
               <li class="header-contact__item">
                 <a class="header-contact__link" href="tel:+48111111111">
                   <svg class="header-contact__icon" width="10" height="16">
-                    <use href="images/icons.svg#icon-smartphone"></use>
-                    </svg>+48 111 111 111</a>
+                    <use href="images/icons.svg#icon-smartphone"></use></svg>+48 111 111 111</a>
               </li>
             </ul>
             <button class="header__btn js-open-menu">
               <div class="header__btn--open"></div>
             </button>
-           </section>          
+          </section>
         </div>
       </div>
 
@@ -134,28 +132,27 @@
           <ul class="work__list">
             <li class="work__item">
               <div class="work__description">Aplikacje Komputerowe</div>
-              <img class="work__img"
-              src="images/whatdowedo/whatwedo1.jpg"
-              srcset="images/whatdowedo/whatwedo1@2x.jpg"
-                alt="kodowanie"
-                
-                 />
+              <img
+                class="work__img"
+                src="images/whatdowedo/whatwedo1.jpg"
+                srcset="images/whatdowedo/whatwedo1@2x.jpg"
+                alt="kodowanie" />
             </li>
             <li class="work__item">
               <div class="work__description">Aplikacje Mobilne</div>
-              <img class="work__img"
-              src="images/whatdowedo/whatwedo2.jpg"
-              srcset="images/whatdowedo/whatwedo2@2x.jpg"
-                alt="stylowanie"
-                 />
+              <img
+                class="work__img"
+                src="images/whatdowedo/whatwedo2.jpg"
+                srcset="images/whatdowedo/whatwedo2@2x.jpg"
+                alt="stylowanie" />
             </li>
             <li class="work__item">
               <div class="work__description">Rozwiązania Graficzne</div>
-              <img class="work__img"
-              src="images/whatdowedo/whatwedo3.jpg"
+              <img
+                class="work__img"
+                src="images/whatdowedo/whatwedo3.jpg"
                 srcset="images/whatdowedo/whatwedo3@2x.jpg"
-                alt="projektowanie"
-                 />
+                alt="projektowanie" />
             </li>
           </ul>
         </div>
@@ -169,12 +166,12 @@
           <ul class="team__list">
             <li class="team__item">
               <picture>
-              <img class="team__img"
-              src="images/ourteam/team1.jpg"
-              srcset="images/ourteam/team1@2x.jpg"
-                alt="product designer John Doe"
-                 />
-                 </picture>
+                <img
+                  class="team__img"
+                  src="images/ourteam/team1.jpg"
+                  srcset="images/ourteam/team1@2x.jpg"
+                  alt="product designer John Doe" />
+              </picture>
 
               <h3 class="team__name">Krzystof Pogodny</h3>
               <p class="team__job">Product Designer</p>
@@ -211,8 +208,9 @@
             </li>
 
             <li class="team__item">
-              <img class="team__img"
-              src="images/ourteam/team2.jpg"
+              <img
+                class="team__img"
+                src="images/ourteam/team2.jpg"
                 srcset="images/ourteam/team2@2x.jpg"
                 alt="frontend developer John Doe" />
 
@@ -242,11 +240,11 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__img"
-              src="images/ourteam/team3.jpg"
+              <img
+                class="team__img"
+                src="images/ourteam/team3.jpg"
                 srcset="images/ourteam/team3@2x.jpg"
-                alt="marketing John Doe"
-                />
+                alt="marketing John Doe" />
 
               <h3 class="team__name">Rafał Borski</h3>
               <p class="team__job">Marketing</p>
@@ -274,11 +272,11 @@
               </ul>
             </li>
             <li class="team__item">
-              <img class="team__img"
-              src="images/ourteam/team4.jpg"
+              <img
+                class="team__img"
+                src="images/ourteam/team4.jpg"
                 srcset="images/ourteam/team4@2x.jpg"
-                alt="UI Designer John Doe"
-                 />
+                alt="UI Designer John Doe" />
 
               <h3 class="team__name">Tomasz Grzyb</h3>
               <p class="team__job">UI Designer</p>
@@ -495,33 +493,51 @@
       </div>
     </div>
     <div class="menu__container js-menu-container">
-    <button type="button" class="menu__close-btn js-close-menu"></button>
-    <nav>
-      <ul class="menu__nav">
-        <li class="menu__item"><a class="menu__item--current" href="index.html">Agencja</a></li>
-        <li class="menu__item"><a href="portfolio.html">Portfolio</a></li>
-        <li class="menu__item"><a href="#">Kontakt</a></li>
+      <button type="button" class="menu__close-btn js-close-menu"></button>
+      <nav>
+        <ul class="menu__nav">
+          <li class="menu__item">
+            <a class="menu__item--current" href="index.html">Agencja</a>
+          </li>
+          <li class="menu__item"><a href="portfolio.html">Portfolio</a></li>
+          <li class="menu__item"><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+      <ul class="menu__contact-list">
+        <li>
+          <a class="menu__contact menu__contact--phone" href="tel:+48111111111"
+            >+48 111 111 111</a
+          >
+        </li>
+        <li>
+          <a
+            class="menu__contact menu__contact--email"
+            href="email:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
       </ul>
-    </nav>
-    <ul class="menu__contact-list">
-      <li><a class="menu__contact menu__contact--phone" href="tel:+48111111111">+48 111 111 111</a></li>
-      <li><a class="menu__contact menu__contact--email" href="email:info@devstudio.com">info@devstudio.com</a></li>
-    </ul>
-    <ul class="menu__socials-list">
-      <li class="menu__socials-item"><a class="menu__socials-link">Instagram</a></li>
-      <li class="menu__socials-item"><a class="menu__socials-link">Twitter</a></li>
-      <li class="menu__socials-item"><a class="menu__socials-link">Facebook</a></li>
-      <li class="menu__socials-item"><a class="menu__socials-link">LinkedIn</a></li>
-    </ul>
-
+      <ul class="menu__socials-list">
+        <li class="menu__socials-item">
+          <a class="menu__socials-link">Instagram</a>
+        </li>
+        <li class="menu__socials-item">
+          <a class="menu__socials-link">Twitter</a>
+        </li>
+        <li class="menu__socials-item">
+          <a class="menu__socials-link">Facebook</a>
+        </li>
+        <li class="menu__socials-item">
+          <a class="menu__socials-link">LinkedIn</a>
+        </li>
+      </ul>
     </div>
     <script src="./js/modal.js"></script>
-     <script
-            defer
-            src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-            crossorigin="anonymous"
-            ></script>
-            <script defer src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
