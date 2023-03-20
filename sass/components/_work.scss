@@ -2,7 +2,7 @@
   @media screen and (min-width:$desk) {
     display: block;
     padding: $section-padding;
-    
+   
   }
 }
 .work__header {
@@ -12,20 +12,24 @@
   text-align: center;
 }
 .work__list {
-  
+  max-width: 95vw;
   @media screen and (min-width:$desk) {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
-  gap: $mgap;
+  
   padding: 0;
   }
  
 }
 .work__item {
-  width: 370px;
-  height: 294px;
+  max-width: 370px;
+  max-height: 294px;
   position: relative;
+}
+.work__img {
+  max-width: 370px;
+  max-height:294px;
 }
 .work__description {
   position: absolute;

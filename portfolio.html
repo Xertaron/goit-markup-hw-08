@@ -25,10 +25,10 @@
               >
               <ul class="nav">
                 <li class="nav__item">
-                  <a href="index.html" class="nav__link current">Agencja</a>
+                  <a href="index.html" class="nav__link">Agencja</a>
                 </li>
                 <li class="nav__item">
-                  <a href="portfolio.html" class="nav__link">Portfolio</a>
+                  <a href="portfolio.html" class="nav__link current">Portfolio</a>
                 </li>
                 <li class="nav__item">
                   <a href="#" class="nav__link">Kontakt</a>
@@ -61,7 +61,6 @@
       <!--Portfolio-->
       <div class="portfolio">
         <div class="container">
-          <div>
             <ul class="portfolio__nav">
               <li>
                 <button class="portfolio__btn" type="button">Wszystkie</button>
@@ -79,8 +78,7 @@
                 <button class="portfolio__btn" type="button">Marketing</button>
               </li>
             </ul>
-          </div>
-          <section>
+           <section>
             <ul class="portfolio__list">
               <li class="portfolio__item">
                 <div class="portfolio__item--overlay">
@@ -236,7 +234,7 @@
                   <p class="portfolio__type">Marketing</p>
                 </div>
               </li>
-              <li class="portfolio__item">
+              <li class="portfolio__item portfolio__item--justify">
                 <div class="portfolio__item--overlay">
                   <p>
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -257,6 +255,7 @@
               </li>
             </ul>
           </section>
+         
         </div>
       </div>
     </main>
@@ -337,6 +336,27 @@
         </form>
       </div>
     </footer>
+     <div class="menu__container js-menu-container">
+    <button type="button" class="menu__close-btn js-close-menu"></button>
+    <nav>
+      <ul class="menu__nav">
+        <li class="menu__item"><a href="index.html">Agencja</a></li>
+        <li class="menu__item"><a class="menu__item--current" href="portfolio.html">Portfolio</a></li>
+        <li class="menu__item"><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <ul class="menu__contact-list">
+      <li><a class="menu__contact menu__contact--phone" href="tel:+48111111111">+48 111 111 111</a></li>
+      <li><a class="menu__contact menu__contact--email" href="email:info@devstudio.com">info@devstudio.com</a></li>
+    </ul>
+    <ul class="menu__socials-list">
+      <li class="menu__socials-item"><a class="menu__socials-link">Instagram</a></li>
+      <li class="menu__socials-item"><a class="menu__socials-link">Twitter</a></li>
+      <li class="menu__socials-item"><a class="menu__socials-link">Facebook</a></li>
+      <li class="menu__socials-item"><a class="menu__socials-link">LinkedIn</a></li>
+    </ul>
+
+    </div>
     <script
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

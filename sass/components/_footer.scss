@@ -25,6 +25,7 @@
   @media screen and (min-width:$desk) {
     justify-content: space-between;
     text-align: start;
+    
   }
 }
 .footer__address {
@@ -123,7 +124,7 @@
   background-color: $background;
   @include border-thin($input-footer);
   border-radius: 4px;
-  max-width: 95vw;
+  min-width: 95vw;
   height: $mlarge;
   padding: 15px 0 15px 16px;
   color: $letter;
@@ -141,9 +142,11 @@
     outline-color: $invalid;
     border-color: $invalid;
   }
-  
+  @media screen and (min-width:$tab) {
+    min-width: 60vw;
+  }
   @media screen and (min-width:$desk) {
-    width: 358px;
+    min-width: 358px;
   }
 }
 .submit {

@@ -48,6 +48,7 @@ $font-m: 16px;
 $container-width: 1200px;
 $line-height-big: 1.95;
 $phone:480px;
+$near-phone:479px;
 $tab:768px;
 $near-tab:767px;
 $desk:1200px;
@@ -88,6 +89,7 @@ $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
 }
 
 @mixin button {
+  min-width: 100px;
   width: 200px;
   height: 50px;
   border: none;
@@ -127,13 +129,14 @@ $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
 
 @mixin container {
   // width: 1200px;
-  width:450px;
   margin: $auto;
+  max-width: 900px;
   @media screen and (min-width:$tab) {
-    width: 738px;
+    min-width: 738px;
   }
   @media screen and (min-width:$desk) {
-    width: 1200px;
+    max-width: none;
+   width: 1200px;
   }
 
 }

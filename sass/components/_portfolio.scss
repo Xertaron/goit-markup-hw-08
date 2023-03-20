@@ -1,19 +1,22 @@
 .portfolio {
-  width: 100vw;
-  margin-left: 15px;
-  margin-top: 60px;
+  
+ padding:$section-padding;
+  
+  display: grid;
   @media screen and (min-width:$desk) {
     padding: $section-padding;
     margin:0;
   }
 }
+
 .portfolio__nav {
   display: flex;
-  width: 100vw;
   flex-wrap: wrap;
+  margin-left: 10px;
+  
   @media screen and (min-width:$tab) {
     justify-content: center;
-    margin: auto;
+    margin-bottom: 30px;
   }
 
 }
@@ -25,7 +28,7 @@
   margin-right: 8px;
   margin-bottom: 15px;
   height: 38px;
- width: 130px;
+  width: 130px;
   border: none;
   border-radius: 4px;
   transition: $transition-delay; 
@@ -34,9 +37,7 @@
     color: $letter;
     background-color: $brand;
   }
-  @media screen and (min-width:$tab) {
-  
-  }
+
   @media screen and (min-width:$desk) {
     width: auto;
     margin-bottom: 34px;
@@ -48,13 +49,24 @@
   display: flex;
   flex-wrap: wrap;
   gap:30px;
-  padding: 0;
+  justify-content: center;
+  
+  @media screen and (min-width:$tab) {
+    max-width: 750px;
+    justify-content: space-between;
+    margin: 0 15px 0 15px;
+  }
+  @media screen and (min-width:$desk) {
+    max-width: none;
+  margin: 0;
+  }
   
 }
 .portfolio__item {
   display: grid;
   position: relative;
   overflow: hidden;
+  max-width: 95vw;
   &:hover,
   &:focus,
   &:active {
@@ -69,11 +81,13 @@
   }
 }
 .portfolio__img {
- 
- width: 95vw;
-  height: 270px;
+  max-width: 95vw;
+  @media screen and (min-width:$phone) {
+    width: 450px;
+  }
    @media screen and (min-width:$tab){
     width: 354px;
+    height: 294px;
   }
   @media screen and (min-width:$desk){
     width: 370px;
@@ -81,17 +95,22 @@
 }
 .portfolio__item--overlay {
   position: absolute;
-  width: 95vw;
+  max-width: 95vw;
   height: 294px;
   background-color: $brand-opaque;
   font-size: 18px;
   color: $main-background;
   line-height: 1.33;
-  padding: 49px 45px 49px 24px;
+  padding: 9px 15px 9px 14px;
   transition: $transition-delay;
   transform: translateY(100%);
+  @media screen and (min-width:$phone) and (max-width:$near-tab) {
+    padding: 40px 50px 10px 50px;
+    font-size:20px;
+  }
   @media screen and (min-width:$tab) {
     width: 354px;
+    padding:49px 45px 49px 24px;
   }
   @media screen and (min-width:$desk) {
     width: 370px;
@@ -101,7 +120,7 @@
   padding-left: 24px;
   @include border-thin($portfolio-border);
   position: relative;
-  z-index: 1;
+  
   background-color: $main-background;
 }
 .portfolio__name {
@@ -115,4 +134,7 @@
   font-size: $font-m;
   line-height: 1.88;
   margin-top: 0.4rem;
+}
+.menu__item--current {
+  color: $brand;
 }

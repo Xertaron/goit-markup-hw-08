@@ -51,13 +51,6 @@ li {
 }
 .container {
 @include container;
-
-@media screen and (min-width:$tab) {
-  width: 768px;
-}
-@media screen and (min-width:$desk) {
-  width:1200px;
-}
 }
 .current {
   color: $brand;
@@ -66,7 +59,7 @@ li {
     display: block;
     content: "";
     position: absolute;
-    top: 39px;
+    top: 40px;
     width: 100%;
     height: 4px;
     border-radius: 2px;

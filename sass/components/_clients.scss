@@ -17,8 +17,9 @@
   justify-content: center;
   gap: 30px;
   @media screen and (min-width:$desk) {
-  @include flex-between;
-  margin-top: $mlarge;}
+  max-width: 95vw;
+  margin-top: $mlarge;
+flex-wrap: nowrap;}
 }
 .clients__item {
   width: 210px;
@@ -43,7 +44,7 @@
     width: 226px;
   }
   @media screen and (min-width:$desk) {
-    width: 170px;
+    max-width: 170px;
   }
 }
 .clients__icon {

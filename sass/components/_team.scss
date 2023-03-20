@@ -1,8 +1,7 @@
 .team {
   background-color: $group;
   width: 100vw;
-  @include border-thin($group);
-  
+  text-align: center;
   padding: $section-padding;
 }
 .team__header {
@@ -12,21 +11,26 @@
  
 }
 .team__list {
+  
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   @media screen and (min-width:$tab) {
     gap:$mgap;
     flex-direction: row;
+    justify-content: center;
   }
   @media screen and (min-width:$desk) {
+    gap:0;
   justify-content: space-between;
+  flex-wrap: nowrap;
   margin-top: 50px;
+  max-width: 95vw;
   }
 }
 .team__item {
-  width: 100vw;
+  max-width: 95vw;
   background-color: $main-background;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
@@ -44,13 +48,16 @@
     }
 }
 .team__img {
-  width:95vw;
+  max-width:95vw;
+  @media screen and (min-width:$phone) {
+    width: 450px;
+  }
   
-  @media screen and (min-width:768px) {
+  @media screen and (min-width:$tab) {
     width: 354px;
     height:374px;
   }
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width:$desk) {
     width: 270px;
     height: 260px;
   }
