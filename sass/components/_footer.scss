@@ -116,9 +116,11 @@
 .form__label {
   display: inline-flex;
   padding: 20px 0;
-  padding-right: 15px;
   @media screen and (min-width:$tab) and (max-width:$near-desk) {
     display: flex;
+}
+@media screen and (min-width:$desk) {
+   padding-right: 15px;
 }}
 .form__input {
   background-color: $background;

@@ -1,7 +1,10 @@
 .hero {
   @include flex-center;
-  background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-  url(../images/hero/herobackground-phone.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/herobackground-phone.jpg);
   height: auto;
   background-size: cover;
   background-position: 50%;
@@ -9,41 +12,54 @@
   width: 100vw;
   margin: 0 auto;
   padding: 0 30px;
-  @media screen and (min-width:480px) {
+  @media screen and (min-width: 480px) {
     min-height: 400px;
   }
-  @media (min-device-pixel-ratio: 2) and (min-width:$phone) and (max-width:$near-tab),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../images/hero/herobackground-phone@2x.jpg);
+  @media (min-device-pixel-ratio: 2) and (min-width: $phone) and (max-width: $near-tab),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/herobackground-phone@2x.jpg);
   }
-  @media (min-device-pixel-ratio: 2) and (min-width:$tab) and (max-width:$near-desk),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../images/hero/herobackground-tab@2x.jpg);
+  @media (min-device-pixel-ratio: 2) and (min-width: $tab) and (max-width: $near-desk),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/herobackground-tab@2x.jpg);
   }
-  @media (min-device-pixel-ratio: 2) and (min-width:$desk),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../images/hero/herobackground-desk@2x.jpg);
+  @media (min-device-pixel-ratio: 2) and (min-width: $desk),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/herobackground-desk@2x.jpg);
   }
   //Wiem że ma nie być powtarzania właściwości w zapytania o media, ale z jakiegoś powodu jeśli ich nie wprowadzę ponownie to przeglądarka ich nie zaaplikuje.
-  @media screen and (min-width:$tab) {
-    background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../images/hero/herobackground-desk.jpg);
-    background-position: 50%;
-    background-size: cover;
+  @media screen and (min-width: $tab) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/herobackground-desk.jpg);
   }
-  @media screen and (min-width:$desk) {
-    background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-    url(../images/hero/herobackground-desk.jpg);
-    background-position: 50%;
+  @media screen and (min-width: $desk) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/herobackground-desk.jpg);
+
     min-height: 600px;
   }
-  }
+}
 .hero__box {
   text-align: center;
 }
@@ -55,12 +71,12 @@
   line-height: 1.36;
   color: $main-background;
   text-transform: uppercase;
-  @media screen and (min-width:$tab) {
+  @media screen and (min-width: $tab) {
     margin: 0 150px 0 150px;
   }
-  @media screen and (min-width:$desk) {
-  font-size: 44px;
- margin: 0 252px 0 252px;
+  @media screen and (min-width: $desk) {
+    font-size: 44px;
+    margin: 0 252px 0 252px;
   }
 }
 .hero__btn {
