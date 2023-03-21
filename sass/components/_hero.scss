@@ -12,7 +12,7 @@
   width: 100vw;
   margin: 0 auto;
   padding: 0 30px;
-  @media screen and (min-width: 480px) {
+  @include phone-up {
     min-height: 400px;
   }
   @media (min-device-pixel-ratio: 2) and (min-width: $phone) and (max-width: $near-tab),
@@ -43,14 +43,14 @@
       url(../images/hero/herobackground-desk@2x.jpg);
   }
   //Wiem że ma nie być powtarzania właściwości w zapytania o media, ale z jakiegoś powodu jeśli ich nie wprowadzę ponownie to przeglądarka ich nie zaaplikuje.
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/hero/herobackground-desk.jpg);
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -71,10 +71,10 @@
   line-height: 1.36;
   color: $main-background;
   text-transform: uppercase;
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     margin: 0 150px 0 150px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     font-size: 44px;
     margin: 0 252px 0 252px;
   }

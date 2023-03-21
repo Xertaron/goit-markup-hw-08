@@ -1,7 +1,7 @@
 .header {
   @include border-thin($border);
   max-width: 100vw;
-  @media screen and (min-width: $desk) {
+  @include desk {
     @include flex-center;
     min-height: 80px;
   }
@@ -9,7 +9,7 @@
 .header__menu {
   @include flex-between;
   max-width: 100vw;
-  @media screen and (min-width: $desk) {
+  @include desk {
     max-width: 95vw;
   }
 }
@@ -24,13 +24,13 @@
     display: none;
   }
 }
-@media screen and (min-width: $tab) {
+@include tab-up {
   .nav {
     display: inline-flex;
     margin-left: 40px;
     justify-content: space-between;
     gap: 50px;
-    @media screen and (min-width: $tab) and (max-width: $near-desk) {
+    @include tab-only  {
       margin-left: 93px;
     }
   }
@@ -44,7 +44,7 @@
   .header-contact {
     display: inline-flex;
     align-items: center;
-    @media screen and (min-width: $tab) and (max-width: $near-desk) {
+    @include tab-only  {
       flex-direction: column;
       align-items: baseline;
     }
@@ -54,7 +54,7 @@
     &:first-child {
       padding-right: 50px;
     }
-    @media screen and (min-width: $tab) {
+    @include tab-up {
       &:first-child {
         padding-right: 15px;
       }
@@ -80,7 +80,7 @@
   height: 40px;
   border: none;
   background: none;
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     display: none;
   }
 }
@@ -132,7 +132,7 @@
 .menu__close-btn {
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 30px;
   width: $medium;
   height: $medium;
   background-color: $main-background;
@@ -154,6 +154,9 @@
       background-color: $brand;
       transition: $transition-delay;
     }
+  }
+  @include phone-up {
+    right: 50px;
   }
 }
 .menu__nav {
@@ -191,7 +194,7 @@
   margin-right: 83px;
 
   width: 85vw;
-  @media screen and (min-width: $phone) {
+  @include phone-up {
     margin-left: 40px;
   }
 }
@@ -202,7 +205,7 @@
     border: none;
     padding-right: 0;
   }
-  @media screen and (min-width: $phone) {
+  @include phone-up {
     border-right: solid 1px $label;
   }
 }

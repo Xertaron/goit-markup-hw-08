@@ -27,7 +27,7 @@
   /* animation: var(--animation); */
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: 528px;
   }
 }
@@ -56,7 +56,7 @@
 .modal__header {
   text-align: center;
   margin: 40px 40px 12px 40px;
-  @media screen and (min-width: $desk) {
+  @include desk {
     margin: 40px 0;
   }
 }
@@ -103,7 +103,7 @@
   &::placeholder {
     color: $label-text;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: 448px;
   }
 }
@@ -137,7 +137,7 @@
   &::placeholder {
     color: $label-text;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: 448px;
   }
 }
@@ -151,7 +151,7 @@
   letter-spacing: 0.03em;
   color: $info;
   font-size: 12px;
-  @media screen and (min-width: $desk) {
+  @include desk {
     font-size: $font-default;
   }
 }
@@ -185,7 +185,7 @@
   height: 15px;
   fill: $modal-icon;
 
-  @media screen and (min-width: $desk) {
+  @include desk {
     top: 0;
     left: -25px;
   }
@@ -198,7 +198,7 @@
   height: 15px;
   visibility: hidden;
   border-radius: 4px;
-  @media screen and (min-width: $desk) {
+  @include desk {
     top: 0;
     left: -25px;
   }

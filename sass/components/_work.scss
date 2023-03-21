@@ -1,6 +1,6 @@
 .work {
   display: none;
-  @media screen and (min-width: $desk) {
+  @include desk {
     display: block;
     padding: $section-padding;
   }
@@ -13,7 +13,7 @@
 }
 .work__list {
   max-width: 95vw;
-  @media screen and (min-width: $desk) {
+  @include desk {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;

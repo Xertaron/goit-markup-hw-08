@@ -2,7 +2,7 @@
   padding: $section-padding;
 
   display: grid;
-  @media screen and (min-width: $desk) {
+  @include desk {
     padding: $section-padding;
     margin: 0;
   }
@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   margin-left: 10px;
 
-  @media screen and (min-width: $tab) {
+  @include tab-up  {
     justify-content: center;
     margin-bottom: 30px;
   }
@@ -36,7 +36,7 @@
     background-color: $brand;
   }
 
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: auto;
     margin-bottom: 34px;
     padding: 6px 22px;
@@ -49,12 +49,12 @@
   gap: 30px;
   justify-content: center;
 
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     max-width: 750px;
     justify-content: space-between;
     margin: 0 15px 0 15px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     max-width: none;
     margin: 0;
   }
@@ -80,14 +80,14 @@
 }
 .portfolio__img {
   max-width: 95vw;
-  @media screen and (min-width: $phone) {
+  @include phone-up {
     width: 450px;
   }
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     width: 354px;
     height: 294px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: 370px;
   }
 }
@@ -103,15 +103,15 @@
   transition: $transition-delay;
   transform: translateY(100%);
   visibility: hidden;
-  @media screen and (min-width: $phone) and (max-width: $near-tab) {
+  @include phone-only {
     padding: 40px 50px 10px 50px;
     font-size: 20px;
   }
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     width: 354px;
     padding: 49px 45px 49px 24px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: 370px;
   }
 }

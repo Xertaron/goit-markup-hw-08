@@ -7,12 +7,12 @@
 }
 .main__list {
   margin: auto;
-  @media screen and (min-width: $tab) and (max-width: $near-desk) {
+  @include tab-only {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     padding-top: 94px;
     display: flex;
     justify-content: space-between;
@@ -21,13 +21,13 @@
 .main__item {
   margin: 15px 0;
   max-width: 95vw;
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     max-width: 354px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: $desk) {
+  @include desk {
     max-width: 270px;
 
     &:last-child {
@@ -40,11 +40,11 @@
   background-color: $group;
   min-width: 95vw;
   max-height: 120px;
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     min-width: 354px;
   }
 
-  @media screen and (min-width: $desk) {
+  @include desk {
     min-width: 270px;
   }
 }
@@ -53,7 +53,7 @@
   font-weight: $font-bold;
   text-transform: uppercase;
 
-  @media screen and (max-width: $near-phone) {
+  @include phone-down {
     text-align: center;
   }
 }

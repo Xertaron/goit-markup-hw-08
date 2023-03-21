@@ -14,12 +14,12 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     gap: $mgap;
     flex-direction: row;
     justify-content: center;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     gap: 0;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -37,26 +37,26 @@
   &:last-child {
     margin: 0;
   }
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     width: 354px;
     margin: 0;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     height: 428px;
     width: auto;
   }
 }
 .team__img {
   max-width: 95vw;
-  @media screen and (min-width: $phone) {
+  @include phone-up {
     width: 450px;
   }
 
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     width: 354px;
     height: 374px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     width: 270px;
     height: 260px;
   }
@@ -75,7 +75,7 @@
 .icons {
   display: inline-flex;
   justify-content: space-around;
-  @media screen and (min-width: $desk) {
+  @include desk {
     margin-left: $medium;
     margin-right: $medium;
   }
@@ -107,7 +107,7 @@
       fill: $letter;
     }
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     margin-right: 0;
     margin-bottom: $medium;
   }

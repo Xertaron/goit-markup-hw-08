@@ -15,10 +15,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  @media screen and (min-width: $phone) {
+  @include phone-up {
     gap: 30px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     max-width: 95vw;
     margin-top: $mlarge;
     flex-wrap: nowrap;
@@ -43,10 +43,10 @@
     color: $brand;
     cursor: pointer;
   }
-  @media screen and (min-width: $tab) {
+  @include tab-up {
     width: 226px;
   }
-  @media screen and (min-width: $desk) {
+  @include desk {
     max-width: 170px;
   }
 }

@@ -156,3 +156,22 @@ $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
   left: 25%;
   transform: rotate(45deg);
 }
+//Media query 
+@mixin phone-down {
+  @media screen and (max-width:479px) {@content;}
+}
+@mixin phone-up {
+  @media screen and (min-width:480px) {@content;}
+}
+@mixin phone-only {
+  @media screen and (min-width:480px) and (max-width:767px) {@content;}
+}
+@mixin tab-up {
+  @media screen and (min-width:768px) {@content;}
+}
+@mixin tab-only {
+  @media screen and (min-width:768px) and (max-width:1199px) {@content;}
+}
+@mixin desk {
+  @media screen and (min-width:1200px) {@content;}
+}
