@@ -130,9 +130,9 @@
   visibility: visible;
 }
 .menu__close-btn {
-  position: absolute;
+  position: fixed;
   top: 8px;
-  right: 30px;
+  right: 8px;
   width: $medium;
   height: $medium;
   background-color: $main-background;
