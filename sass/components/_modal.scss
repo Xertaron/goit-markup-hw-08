@@ -27,12 +27,16 @@
   /* animation: var(--animation); */
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  @include phone-down {
+    width: 95vw;
+    min-height: auto;
+  }
   @include desk {
     width: 528px;
   }
 }
 .modal__close-btn {
-  position: absolute;
+  position: fixed;
   top: 8px;
   right: 8px;
   width: $medium;
@@ -103,6 +107,10 @@
   &::placeholder {
     color: $label-text;
   }
+  @include phone-down {
+    width:90vw;
+    height: auto;
+  }
   @include desk {
     width: 448px;
   }
@@ -137,6 +145,10 @@
   &::placeholder {
     color: $label-text;
   }
+  @include phone-down {
+    width: 90vw;
+    height: auto;
+  }
   @include desk {
     width: 448px;
   }
@@ -151,6 +163,9 @@
   letter-spacing: 0.03em;
   color: $info;
   font-size: 12px;
+  @include phone-down {
+    font-size: 10px;
+  }
   @include desk {
     font-size: $font-default;
   }
