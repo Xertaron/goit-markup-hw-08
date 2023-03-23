@@ -129,12 +129,12 @@ $animation: YouSpinMeRoundNow 4s cubic-bezier(0.4, 0, 0.2, 1) 250ms 1 both;
 @mixin container {
   // width: 1200px;
   margin: $auto;
-  max-width: 900px;
-  @media screen and (min-width: $tab) {
+  
+  @media screen and (min-width: $tab) and (max-width:$near-desk) {
     min-width: 738px;
+    max-width: 900px;
   }
   @media screen and (min-width: $desk) {
-    max-width: none;
     width: 1200px;
   }
 }
