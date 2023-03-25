@@ -79,6 +79,7 @@
   }
 }
 .portfolio__img {
+  display: block;
   max-width: 95vw;
   @include phone-up {
     width: 450px;
