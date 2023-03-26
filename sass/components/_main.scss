@@ -38,7 +38,7 @@
 .main__icon {
   padding: 25px 0;
   background-color: $group;
-  max-width: 95vw;
+  min-width: 95vw;
   max-height: 120px;
   @include tab-up {
     min-width: 354px;
@@ -53,7 +53,7 @@
   font-weight: $font-bold;
   text-transform: uppercase;
 
-  @include phone-down {
+  @include tab-down {
     text-align: center;
   }
 }
