@@ -47,18 +47,9 @@
   }
 }
 .team__img {
-  max-width: 95vw;
-  @include phone-up {
+  @include tab-down {
     width: 450px;
-  }
-
-  @include tab-up {
-    width: 354px;
-    height: 374px;
-  }
-  @include desk {
-    width: 270px;
-    height: 260px;
+    max-width: 95vw;
   }
 }
 .team__name {

@@ -22,7 +22,8 @@
           <section class="header__menu">
             <nav>
               <a class="logo" href="index.html">
-                <span class="logo__left">Web</span>Studio</a>
+                <span class="logo__left">Web</span>Studio</a
+              >
               <ul class="nav">
                 <li class="nav__item">
                   <a href="index.html" class="nav__link current">Agencja</a>
@@ -165,6 +166,18 @@
           <ul class="team__list">
             <li class="team__item">
               <picture>
+                <source
+                  media="(min-width:1200px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team1desk@2x.jpg" />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="images/ourteam/team1desk.jpg" />
+                <source
+                  media="(min-width:768px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team1tab@2x.jpg" />
+                <source
+                  media="(min-width:768px)"
+                  srcset="images/ourteam/team1tab.jpg" />
                 <img
                   class="team__img"
                   src="images/ourteam/team1.jpg"
@@ -207,11 +220,25 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/ourteam/team2.jpg"
-                srcset="images/ourteam/team2@2x.jpg"
-                alt="frontend developer John Doe" />
+              <picture>
+                <source
+                  media="(min-width:1200px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team2desk@2x.jpg" />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="images/ourteam/team2desk.jpg" />
+                <source
+                  media="(min-width:768px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team2tab@2x.jpg" />
+                <source
+                  media="(min-width:768px)"
+                  srcset="images/ourteam/team2tab.jpg" />
+                <img
+                  class="team__img"
+                  src="images/ourteam/team2.jpg"
+                  srcset="images/ourteam/team2@2x.jpg"
+                  alt="frontend developer John Doe" />
+              </picture>
 
               <h3 class="team__name">Kinga Szpak</h3>
               <p class="team__job">Frontend Developer</p>
@@ -239,11 +266,25 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/ourteam/team3.jpg"
-                srcset="images/ourteam/team3@2x.jpg"
-                alt="marketing John Doe" />
+              <picture>
+                <source
+                  media="(min-width:1200px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team3desk@2x.jpg" />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="images/ourteam/team3desk.jpg" />
+                <source
+                  media="(min-width:768px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team3tab@2x.jpg" />
+                <source
+                  media="(min-width:768px)"
+                  srcset="images/ourteam/team3tab.jpg" />
+                <img
+                  class="team__img"
+                  src="images/ourteam/team3.jpg"
+                  srcset="images/ourteam/team3@2x.jpg"
+                  alt="marketing John Doe" />
+              </picture>
 
               <h3 class="team__name">Rafał Borski</h3>
               <p class="team__job">Marketing</p>
@@ -271,11 +312,25 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/ourteam/team4.jpg"
-                srcset="images/ourteam/team4@2x.jpg"
-                alt="UI Designer John Doe" />
+              <picture>
+                <source
+                  media="(min-width:1200px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team4desk@2x.jpg" />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="images/ourteam/team4desk.jpg" />
+                <source
+                  media="(min-width:768px) and (min-device-pixel-ratio: 2)"
+                  srcset="images/ourteam/team4tab@2x.jpg" />
+                <source
+                  media="(min-width:768px)"
+                  srcset="images/ourteam/team4tab.jpg" />
+                <img
+                  class="team__img"
+                  src="images/ourteam/team4.jpg"
+                  srcset="images/ourteam/team4@2x.jpg"
+                  alt="UI Designer John Doe" />
+              </picture>
 
               <h3 class="team__name">Tomasz Grzyb</h3>
               <p class="team__job">UI Designer</p>
@@ -524,7 +579,7 @@
           <a class="menu__socials-link" href="#">Twitter</a>
         </li>
         <li class="menu__socials-item">
-          <a class="menu__socials-link" href="#" >Facebook</a>
+          <a class="menu__socials-link" href="#">Facebook</a>
         </li>
         <li class="menu__socials-item">
           <a class="menu__socials-link" href="#">LinkedIn</a>

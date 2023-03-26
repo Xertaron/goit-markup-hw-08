@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   margin-left: 10px;
 
-  @include tab-up  {
+  @include tab-up {
     justify-content: center;
     margin-bottom: 30px;
   }
@@ -80,16 +80,9 @@
 }
 .portfolio__img {
   display: block;
-  max-width: 95vw;
-  @include phone-up {
+  @include tab-down {
     width: 450px;
-  }
-  @include tab-up {
-    width: 354px;
-    height: 294px;
-  }
-  @include desk {
-    width: 370px;
+    max-width: 95vw;
   }
 }
 .portfolio__item--overlay {

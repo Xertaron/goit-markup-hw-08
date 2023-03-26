@@ -38,7 +38,7 @@
 .main__icon {
   padding: 25px 0;
   background-color: $group;
-  min-width: 95vw;
+  max-width: 95vw;
   max-height: 120px;
   @include tab-up {
     min-width: 354px;
