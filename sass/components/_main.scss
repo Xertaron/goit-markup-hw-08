@@ -2,7 +2,6 @@
   display: flex;
   background-color: $main-background;
   justify-content: center;
-  width: 100vw;
   padding: $section-padding;
 }
 .main__list {
@@ -19,8 +18,7 @@
   }
 }
 .main__item {
-  margin: 15px 0;
-  max-width: 95vw;
+  max-width: 90vw;
   @include tab-up {
     max-width: 354px;
     display: flex;
@@ -29,16 +27,12 @@
 
   @include desk {
     max-width: 270px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 .main__icon {
   padding: 25px 0;
   background-color: $group;
-  min-width: 95vw;
+  width: 90vw;
   max-height: 120px;
   @include tab-up {
     min-width: 354px;
